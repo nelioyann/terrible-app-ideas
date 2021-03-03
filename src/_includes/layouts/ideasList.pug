@@ -1,0 +1,5 @@
+ul.responsive-grid.reset.gap
+    for idea, i in collections.idea
+        li.flex.fd-c.shadow.padding.borderius.light
+            a.no-padding(href=idea.url) #{idea.data.title}
+            span #{idea.data.description}

@@ -1,0 +1,18 @@
+include head.pug
+body.responsive-padding.dark-mode
+    header.flex.jc-sb.ai-c.border-b
+        .logo
+            a(href="/")
+                strong API
+        div.flex.fd-c.ai-c
+            span ◐ 
+        nav
+            ul.flex.reset
+                for idea, i in collections.idea
+                    li
+                        a(href=idea.url) #{idea.data.title}
+    main
+        h1 Astounding Project Ideas
+        p This website was made by #{meta.name}
+        h2 Here is a list of Astounding Project Ideas
+        include ideasList.pug 

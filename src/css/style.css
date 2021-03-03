@@ -1,0 +1,148 @@
+html, body{
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    /* font-size: 62.5%; */
+}
+
+:root{
+    --color-dark: #212829;
+    --color-light: #F3F4F4;
+    --color-primary: #F87504;
+
+    
+}
+
+body{
+    --background: var(--color-light) ;
+    --foreground: var(--color-dark);
+    background-color: var(--background);
+    color: var(--foreground);
+    /* padding-left:var(--paddingSide);
+    padding-right: var(--paddingSide); */
+    min-height: 100vh;
+    margin: auto;
+}
+
+.responsive-width{
+    width: clamp(10em, 100% , 60em);
+
+
+}
+.responsive-padding{
+    padding: 0 clamp(1em, 10vw , 5em);
+
+
+
+}
+
+.dark-mode{
+    --background: var(--color-dark) ;
+    --foreground: var(--color-light);
+}
+.light{
+    background-color: var(--color-light) ;
+    color: var(--color-dark);
+}
+
+.flex{
+    display: flex;
+}
+
+.flex.jc-sb{
+    justify-content: space-between;
+}
+.ai-c{align-items: center;}
+.jc-c{justify-content: center;}
+
+.flex.fd-c {flex-direction: column;}
+.gap{gap: 1em;}
+
+ul.reset{
+    list-style-type: none;
+    padding: 0;
+    /* margin-left: 0; */
+}
+
+a{
+    text-decoration: none;
+    padding: 0 0.5em;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+
+.border-b{
+    border-bottom: 1px solid #22222225;
+
+}
+
+.thumbnail{
+    width: clamp(5em, 100% , 35em);
+
+}
+
+.shadow{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.padding{
+    padding: 0.5em;
+}
+
+.borderius{
+    border-radius: 5px;
+}
+
+.responsive-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+
+.grid{
+    display: grid;
+}
+
+.primary{
+    color: var(--color-primary);
+}
+
+/* ------------------------------------------------------------------------------ HERO */
+.hero{
+    grid-template-columns: 2fr 3fr;
+}
+.hero-image img{
+    /* background-image: url("/images/uploads/hero.png"); */
+
+    /* width: 90%; */
+    height: clamp(20em ,40vw, 45em);
+    /* height: 100%; */
+    margin-left: auto;
+}
+.grid-body-rows{
+    grid-template-rows: auto 1fr ;
+
+}
+.hero h1{
+    font-size: clamp(1em, 4vw,3em);
+    font-weight: 400;
+    
+}
+.hero p{
+    
+    font-size: clamp(1em, 1.6vw,1.5em);
+
+    opacity: 0.8;
+    font-weight: 200;
+}
+
+.hero a{
+    background-color: var(--foreground);
+    color: var(--color-primary);
+    font-size: larger;
+    padding: 0.5em 2em;
+}
+/* ------------------------------------------------------------------------------ HERO */
