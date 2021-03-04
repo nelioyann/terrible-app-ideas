@@ -82,7 +82,7 @@ a{
 }
 
 .thumbnail{
-    width: clamp(5em, 100% , 35em);
+    width: clamp(5em, 100% , 20em);
 
 }
 
@@ -118,9 +118,9 @@ a{
     /* background-image: url("/images/uploads/hero.png"); */
 
     /* width: 90%; */
-    height: clamp(20em ,40vw, 45em);
+    height: clamp(20em ,35vw, 45em);
     /* height: 100%; */
-    margin-left: auto;
+    /* margin-left: auto; */
 }
 .grid-body-rows{
     grid-template-rows: auto 1fr ;
@@ -131,6 +131,11 @@ a{
     font-weight: 400;
     
 }
+
+.hero span{
+
+    font-size: clamp(0.8em, 1.5vw,1em);
+}
 .hero p{
     
     font-size: clamp(1em, 1.6vw,1.5em);
@@ -139,10 +144,22 @@ a{
     font-weight: 200;
 }
 
+main{
+    flex: 2 1 auto;
+}
 .hero a{
     background-color: var(--foreground);
     color: var(--color-primary);
-    font-size: larger;
+    font-size: clamp(1em, 1.6vw,1.5em);
     padding: 0.5em 2em;
 }
+
+@media screen and (max-width:50em ) {
+    .hero {
+      grid-template-columns: 1fr;
+    }
+    .hero-image{
+        grid-row-start: 1;
+    }
+  }
 /* ------------------------------------------------------------------------------ HERO */
