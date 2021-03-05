@@ -7,16 +7,16 @@ html(lang="en")
         title #{title}
         meta(name="description", content=description )
         link(rel="stylesheet", href="/css/style.css")
-        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap")
-    body.responsive-padding.dark-mode.flex.fd-c
-        header.flex.jc-sb.ai-c.border-b
+        link(rel="preconnect", href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Martel:wght@200;400;800&family=Raleway+Dots&display=swap", rel="stylesheet")
+    body.responsive-padding.flex.fd-c.dark-mode
+        header.flex.jc-sb.ai-c
             .logo
                 a(href="/")
-                    strong API
+                    strong TPI
             div.flex.fd-c.ai-c
                 span ◐ 
             nav
                 ul.flex.reset
-                    for idea, i in collections.idea
-                        li
-                            a(href=idea.url) #{idea.data.title}
+                    li
+                        a.btn-secondary.padding.borderius(href="/submit") Submit your idea

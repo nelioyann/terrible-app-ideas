@@ -4,6 +4,7 @@ description: Evaluate how you feel everyday
 author: Surjith S M
 featuredImage: /images/uploads/moodtracker.png
 date: 2020-09-01
+categories: [frontend]
 ---
 
 ## Programming Steps
