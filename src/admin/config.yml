@@ -1,14 +1,12 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
-
-media_folder: "_site/images/uploads"
+media_folder: "src/images/uploads"
 public_folder: "/images/uploads"
-
 collections: 
   - name: "ideas"
     label: "Ideas"
-    folder: "ideas"
+    folder: "src/ideas"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/idea.pug"}
