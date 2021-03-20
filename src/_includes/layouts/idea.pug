@@ -1,8 +1,13 @@
-
-include base.pug
-h1 #{title}
-img.thumbnail(src=featuredImage, alt=title)
-p #{description}
-div !{content}
+doctype html
+html(lang="en")
+    include ../partials/head.pug
+    include ../partials/body.pug
+        include ../partials/header.pug
+        main
+            h1 #{title}
+            img.thumbnail(src=featuredImage, alt=title)
+            p #{description}
+            div !{content}
+    include ../partials/scripts.pug
 
 //- #{content | safe}

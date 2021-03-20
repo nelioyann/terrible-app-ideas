@@ -1,5 +1,14 @@
 ul.responsive-grid.reset.gap
     for idea, i in collections.idea
-        li.flex.fd-c.shadow.padding.borderius.light
-            a.no-padding(href=idea.url) #{idea.data.title}
-            span #{idea.data.description}
+        li.flex.fd-c.shadow.padding.borderius
+            article.card 
+                .card__image
+                    img.thumbnail.borderius(src=idea.data.featuredImage, alt=title)
+
+                .card__body
+                    small Added on #{page.date.toDateString()}
+                    h2 
+                        a.no-padding(href=idea.url) #{idea.data.title}
+                    p #{idea.data.description}
+                    for category in idea.data.categories
+                        div #{category}

@@ -1,6 +1,12 @@
-include head.pug
-main
-    h1 #{title}
-    p #{description}
-    h2 Latest Astounding Project Ideas
-    include ideasList.pug 
+doctype html
+html(lang="en")
+    include ../partials/head.pug
+    include ../partials/body.pug
+        include ../partials/header.pug
+        main
+            h1 #{title}
+            p #{description}
+            h2 Latest Astounding Project Ideas
+            include ideasList.pug 
+    include ../partials/scripts.pug
+    
