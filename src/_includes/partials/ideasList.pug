@@ -12,17 +12,17 @@ ul.grid.responsive-grid-m.reset.gap-m
                     p #{idea.data.description}
                     for category in idea.data.categories
                         div.card__meta #{category}
-    li.fd-c.shadow.new-idea.animate-fade-up
-        article.card.borderius.no-overflow
+    li.flex.shadow.new-idea.animate-fade-up
+        article.flex.fd-c.card.no-overflow.bg-accent
             .card__image.bg-boiler
                 //- span 💡
                 img(src="/images/uploads/transparent.png", alt=title)
 
-            .card__body.padding-m
+            .card__body.flex.fd-c.padding-m.fg-1
                 small Might be added today
                 h2 
                     a.no-padding(href="/submit") Your Idea here
-                p.primary.flex
+                a.primary.flex(href="/submit")
                     span Submit
                     include arrowSVG.pug
-                //- .card__meta TPI
+                .card__meta TPI

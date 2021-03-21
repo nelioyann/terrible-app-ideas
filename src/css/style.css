@@ -62,6 +62,7 @@ html {
     --color-loader: #7D4FFA;
     --foreground: var(--color-dark);
     --toggle-size: clamp(2em, 3vw, 15em);
+    --ease-cubic: cubic-bezier(0.2, 0, 0.13, 1.5)
 }
 
 body {
@@ -76,11 +77,12 @@ body {
     margin: auto;
 }
 
-body.theme-dark{
+body.theme-dark {
     --color-accent: var(--color-dark-accent);
     --color-anti-accent: var(--color-light-accent);
 }
-body.theme-light{
+
+body.theme-light {
     --color-accent: var(--color-light-accent);
     --color-anti-accent: var(--color-dark-accent);
 }
@@ -103,17 +105,20 @@ h5 {
 ::-webkit-scrollbar {
     width: 10px;
 }
+
 /* Track */
 ::-webkit-scrollbar-track {
     background: var(--background);
     border: 1px solid var(--foreground);
     border-radius: 5px;
 }
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: var(--foreground);
     border-radius: 5px;
 }
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: var(--foreground);
@@ -152,10 +157,11 @@ h5 {
     justify-content: space-between;
 }
 
-.fg-1{
+.fg-1 {
     flex-grow: 1;
 
 }
+
 .ai-c {
     align-items: center;
 }
@@ -171,6 +177,7 @@ h5 {
 .gap {
     gap: 1em;
 }
+
 .gap-m {
     gap: 1.5em;
 }
@@ -207,7 +214,8 @@ a {
 .border-bottom {
     border-bottom: 1px solid var(--foreground);
 }
-.border-top{
+
+.border-top {
     border-top: 1px solid var(--foreground);
 }
 
@@ -223,34 +231,41 @@ a {
 .padding {
     padding: 0.5em;
 }
-.padding-m{
+
+.padding-m {
     padding: 1em;
 
 }
-.padding-y{
+
+.padding-y {
     padding-left: 0;
     padding-right: 0;
 }
-.padding-x{
+
+.padding-x {
     padding-top: 0;
     padding-bottom: 0;
-    
+
 }
+
 .margin {
     margin: 0.5em;
 }
-.margin-m{
+
+.margin-m {
     margin: 1em;
 
 }
-.margin-y{
+
+.margin-y {
     margin-left: 0;
     margin-right: 0;
 }
-.margin-x{
+
+.margin-x {
     margin-top: 0;
     margin-bottom: 0;
-    
+
 }
 
 .borderius {
@@ -286,6 +301,7 @@ a {
 }
 
 .btn-secondary {
+    background-color: transparent;
     border: 2px solid var(--color-primary);
     color: var(--color-primary);
 }
@@ -298,11 +314,13 @@ a {
 .bg-primary {
     background-color: var(--color-primary);
 }
+
 .bg-accent {
     background-color: var(--color-accent);
 }
 
-img, svg {
+img,
+svg {
     max-width: 100%;
 }
 
@@ -323,6 +341,20 @@ img[src$=".svg"] {
     max-width: none;
 }
 
+
+/* Contact- */
+label{
+    font-size: 1.2em;
+}
+input, textarea{
+    background-color:var(--color-accent);
+    font-size: 1.5rem;
+    color: var(--foreground);
+    font-family: var(--font-body);
+    /* padding: 0.2em; */
+}
+
+
 /* ------------------------------------------------------------------------------ HERO */
 .hero__content {
     height: 90vh;
@@ -333,7 +365,7 @@ img[src$=".svg"] {
     /* background-image: url("/images/uploads/hero.png"); */
 
     /* width: 90%; */
-    
+
     height: clamp(15em, 35vw, 45em);
     margin: auto;
     margin-top: -6em;
@@ -392,7 +424,8 @@ img[src$=".svg"] {
     font-size: clamp(0.9em, 1.6vw, 1.5em);
     font-family: var(--font-body);
     line-height: 1.5;
-    /* max-width: 70ch; */
+    text-align: center;
+    max-width: 70ch;
     /* opacity: 0.8; */
     /* font-weight: lighter; */
 }
@@ -483,17 +516,25 @@ main {
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    box-shadow: none !important;
+}
+.rotating {
+    animation-name: rotating;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    /* animation-direction: ; */
+    animation-fill-mode: forwards;
+    animation-timing-function: var(--ease-cubic);
 }
 
 @keyframes floating {
-    
-
     50% {
         transform: translate(0, 1em);
     }
-
-
+}
+@keyframes rotating {
+    100% {
+        transform: rotate(1turn);
+    }
 }
 
 
@@ -525,7 +566,7 @@ small,
 }
 
 
-.card{
+.card {
     position: relative;
 }
 
@@ -541,7 +582,7 @@ small,
     color: var(--color-anti-accent);
 }
 
-.card a::after{
+.card a::after {
     content: "";
     position: absolute;
     z-index: 2;
@@ -554,13 +595,13 @@ small,
 
 /* Logo */
 
-.logo svg path{
-    fill:var(--foreground)
+.logo svg path {
+    fill: var(--foreground)
 }
 
 
 /* Ideas - New Idea */
-li.new-idea{
+li.new-idea {
     border: 2px dashed var(--foreground);
 }
 
@@ -568,18 +609,18 @@ li.new-idea{
 
 /* Footer */
 
-footer{
-    margin-top:5em
+footer {
+    margin-top: 5em
 }
 
 
-.bg-boiler{
+.bg-boiler {
     background-image: linear-gradient(235deg, var(--background) 3%, var(--color-accent) 42%, var(--background) 98%);
     position: relative;
     overflow: hidden;
 }
 
-.bg-boiler::after{
+.bg-boiler::after {
     content: "Terrible Project Idea 💡";
     position: absolute;
     color: var(--color-anti-accent);
@@ -588,7 +629,7 @@ footer{
     line-height: 1.5;
     top: 50%;
     left: 50%;
-    transform:translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     font-weight: bold;
     font-size: 1.5em;
     text-transform: uppercase;
@@ -610,8 +651,9 @@ footer{
     place-items: center;
 }
 
-.loading-screen img{
-    transform: rotateY(0.5turn);
+.loading-screen svg {
+    width: 5em;
+    height:5em;
 }
 
 .load-container {

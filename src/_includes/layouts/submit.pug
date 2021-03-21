@@ -6,7 +6,7 @@ html(lang="en")
         main.barba-container(data-barba="container" data-barba-namespace=title)
             h1 #{title}
             p #{description}
-            form(action="post").animate-fade-up
+            form(netlify).animate-fade-up
                 fieldset
                     legend General Info
                     label.flex.fd-c(for="subject")
@@ -20,11 +20,8 @@ html(lang="en")
                     label.flex.fd-c(for="subject")
                         span Description
                         textarea#description(name="description", cols="30", rows="10") 
-                    label.flex.fd-c(for="category")
-                        span Category 
-                        select#category(name="category")
-                            option(value="frontend") Frontend
-                button(type="submit") Submit
-
+                    
+                button.btn-secondary.padding-m.margin-m.margin-y(type="submit") Submit
+        include ../partials/footer.pug
     include ../partials/scripts.pug
     
