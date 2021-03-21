@@ -1,10 +1,11 @@
 ---
 title: Affective music
-description: Make music from your heart 
-
-featuredImage: /images/uploads/affectivemusic.png
+description: Sensors record your heart rhythm from the surface of your skin.
+  This app turns this into music by shaping it to match your beats per minute.
 date: 2020-09-01
-categories: [frontend]
+featuredImage: /images/uploads/affectivemusic.png
+categories:
+  - frontend
 ---
 
 ## Programming Steps
