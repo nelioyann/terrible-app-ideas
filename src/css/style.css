@@ -261,7 +261,7 @@ a {
     background-color: var(--color-primary);
 }
 
-img {
+img, svg {
     max-width: 100%;
 }
 
@@ -292,6 +292,7 @@ img[src$=".svg"] {
     /* background-image: url("/images/uploads/hero.png"); */
 
     /* width: 90%; */
+    
     height: clamp(15em, 35vw, 45em);
     margin: auto;
     margin-top: -6em;
