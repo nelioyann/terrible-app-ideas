@@ -12,7 +12,11 @@ categories:
 * Record heart rate measurements through a sensor 
 * Turn the values into tones
 
-## Suggested Implementation 
+## Suggested Implementation
 
 * Use the Web Bluetooth API
 * Create a Progressive Web App
+
+## Ressources
+
+* Web Bluetooth API docs
