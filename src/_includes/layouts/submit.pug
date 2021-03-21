@@ -3,10 +3,10 @@ html(lang="en")
     include ../partials/head.pug
     include ../partials/body.pug
         include ../partials/header.pug
-        main
+        main.barba-container(data-barba="container" data-barba-namespace=title)
             h1 #{title}
             p #{description}
-            form(action="post")
+            form(action="post").animate-fade-up
                 fieldset
                     legend General Info
                     label.flex.fd-c(for="subject")

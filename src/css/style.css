@@ -59,6 +59,7 @@ html {
     --font-headings: 'IBM Plex Sans', sans-serif;
     /* --font-headings: 'IBM Plex Serif', serif; */
     --background: var(--color-light);
+    --color-loader: #7D4FFA;
     --foreground: var(--color-dark);
     --toggle-size: clamp(2em, 3vw, 15em);
 }
@@ -595,4 +596,36 @@ footer{
     font-weight: bold;
     font-size: 1.5em;
     text-transform: uppercase;
+}
+
+
+/* Barba */
+
+
+.loading-screen {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    background-color: var(--foreground);
+    width: 0%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.loading-screen img{
+    transform: rotateY(0.5turn);
+}
+
+.load-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 10;
+    pointer-events: none;
 }

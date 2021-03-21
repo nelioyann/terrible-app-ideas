@@ -1,7 +1,7 @@
 ---
 layout: layouts/submit.pug
 title: Submit your idea
-description: Use the form to submit your tertrible idea
+description: Share your awesome project idea. Maybe we can help you figure out how to make it great.
 ---
 
 # Submit your idea

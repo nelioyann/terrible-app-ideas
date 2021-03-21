@@ -3,9 +3,10 @@ html(lang="en")
     include ../partials/head.pug
     include ../partials/body.pug
         include ../partials/header.pug
-        main
-            h1 #{title}
-            p #{description}
+        main.barba-container(data-barba="container" data-barba-namespace=title)
+            .animate-fade-up
+                h1 #{title}
+                p #{description}
             //- h2 Latest Terrible Project Ideas
             include ../partials/ideasList.pug 
         include ../partials/footer.pug
