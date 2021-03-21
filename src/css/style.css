@@ -43,8 +43,6 @@ body {
     margin: 0;
     box-sizing: border-box;
 
-    /* font-family: sans-serif; */
-    /* font-size: 62.5%; */
 }
 
 html {
@@ -52,9 +50,11 @@ html {
 }
 
 :root {
-    --color-dark: rgb(20, 33, 61);
-    --color-light: rgb(229, 229, 229);
-    --color-primary: rgb(252, 163, 17);
+    --color-dark: hsl(228, 19%, 11%);
+    --color-light: hsl(0, 19%, 90%);
+    --color-dark-accent: hsl(228, 19%, 13%);
+    --color-light-accent: hsl(0, 19%, 89%);
+    --color-primary: hsl(37, 98%, 53%);
     --font-body: 'IBM Plex Sans', sans-serif;
     --font-headings: 'IBM Plex Sans', sans-serif;
     /* --font-headings: 'IBM Plex Serif', serif; */
@@ -67,13 +67,21 @@ body {
 
     background-color: var(--background);
     color: var(--foreground);
-    /* background-image: linear-gradient(235deg, #fff8f4 3%, #def1ff 42%, #fff8f4 98%); */
 
     /* padding-left:var(--paddingSide);
     padding-right: var(--paddingSide); */
     font-family: var(--font-body);
     min-height: 100vh;
     margin: auto;
+}
+
+body.theme-dark{
+    --color-accent: var(--color-dark-accent);
+    --color-anti-accent: var(--color-light-accent);
+}
+body.theme-light{
+    --color-accent: var(--color-light-accent);
+    --color-anti-accent: var(--color-dark-accent);
 }
 
 h1,
@@ -88,29 +96,23 @@ h5 {
 
 .responsive-width {
     width: clamp(10em, 100%, 60em);
-
-
 }
 
 
 ::-webkit-scrollbar {
     width: 10px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
     background: var(--background);
     border: 1px solid var(--foreground);
     border-radius: 5px;
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: var(--foreground);
-
     border-radius: 5px;
 }
-
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: var(--foreground);
@@ -118,12 +120,9 @@ h5 {
 
 .responsive-padding {
     padding: 0 clamp(1em, 10vw, 15em);
-
-
-
 }
 
-.dark-mode {
+/* .dark-mode {
     --background: var(--color-dark);
     --foreground: var(--color-light);
 }
@@ -131,9 +130,9 @@ h5 {
 .light {
     background-color: var(--color-light);
     color: var(--color-dark);
-}
+} */
 
-.visuallyhidden {
+.visually-hidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -152,6 +151,10 @@ h5 {
     justify-content: space-between;
 }
 
+.fg-1{
+    flex-grow: 1;
+
+}
 .ai-c {
     align-items: center;
 }
@@ -166,6 +169,9 @@ h5 {
 
 .gap {
     gap: 1em;
+}
+.gap-m {
+    gap: 1.5em;
 }
 
 ul.reset {
@@ -197,10 +203,11 @@ a {
     overflow-y: hidden;
 }
 
-.border-b {
+.border-bottom {
     border-bottom: 1px solid var(--foreground);
-
-
+}
+.border-top{
+    border-top: 1px solid var(--foreground);
 }
 
 .thumbnail {
@@ -214,6 +221,35 @@ a {
 
 .padding {
     padding: 0.5em;
+}
+.padding-m{
+    padding: 1em;
+
+}
+.padding-y{
+    padding-left: 0;
+    padding-right: 0;
+}
+.padding-x{
+    padding-top: 0;
+    padding-bottom: 0;
+    
+}
+.margin {
+    margin: 0.5em;
+}
+.margin-m{
+    margin: 1em;
+
+}
+.margin-y{
+    margin-left: 0;
+    margin-right: 0;
+}
+.margin-x{
+    margin-top: 0;
+    margin-bottom: 0;
+    
 }
 
 .borderius {
@@ -255,10 +291,14 @@ a {
 
 .primary {
     color: var(--color-primary);
+    fill: var(--color-primary);
 }
 
 .bg-primary {
     background-color: var(--color-primary);
+}
+.bg-accent {
+    background-color: var(--color-accent);
 }
 
 img, svg {
@@ -500,6 +540,8 @@ small,
     text-transform: uppercase;
     letter-spacing: .2em;
     word-spacing: -.25em;
+    margin-top: auto;
+    color: var(--color-anti-accent);
 }
 
 .card a::after{
@@ -512,8 +554,45 @@ small,
     bottom: 0;
 }
 
+
 /* Logo */
 
 .logo svg path{
     fill:var(--foreground)
+}
+
+
+/* Ideas - New Idea */
+li.new-idea{
+    border: 2px dashed var(--foreground);
+}
+
+
+
+/* Footer */
+
+footer{
+    margin-top:5em
+}
+
+
+.bg-boiler{
+    background-image: linear-gradient(235deg, var(--background) 3%, var(--color-accent) 42%, var(--background) 98%);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-boiler::after{
+    content: "Terrible Project Idea 💡";
+    position: absolute;
+    color: var(--color-anti-accent);
+    z-index: 2;
+    opacity: 0.8;
+    line-height: 1.5;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 1.5em;
+    text-transform: uppercase;
 }

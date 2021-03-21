@@ -1,3 +1,5 @@
 module.exports = {
-    name: "Yannick nana"
+    name: "Yannick nana",
+    site_name: "Terrible Project Ideas",
+    theme_color: "#fca311"
 }

@@ -1,0 +1,28 @@
+ul.grid.responsive-grid-m.reset.gap-m
+    for idea, i in collections.idea
+        li.flex.shadow
+            article.flex.fd-c.card.no-overflow.bg-accent
+                .card__image
+                    img(src=idea.data.featuredImage, alt=title)
+
+                .card__body.flex.fd-c.padding-m.fg-1
+                    small Added on #{page.date.toDateString()}
+                    h2 
+                        a.no-padding(href=idea.url) #{idea.data.title}
+                    p #{idea.data.description}
+                    for category in idea.data.categories
+                        div.card__meta #{category}
+    li.fd-c.shadow.new-idea
+        article.card.borderius.no-overflow
+            .card__image.bg-boiler
+                //- span 💡
+                img(src="/images/uploads/transparent.png", alt=title)
+
+            .card__body.padding-m
+                small Added today
+                h2 
+                    a.no-padding(href="/submit") Your Idea here
+                p.primary.flex
+                    span Submit
+                    include arrowSVG.pug
+                //- .card__meta TPI
