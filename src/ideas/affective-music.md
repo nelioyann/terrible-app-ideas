@@ -19,4 +19,4 @@ categories:
 
 ## Ressources
 
-* Web Bluetooth API docs
+* [Web Bluetooth API](https://web.dev/bluetooth/)
