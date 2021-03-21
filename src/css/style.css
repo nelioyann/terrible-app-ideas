@@ -376,7 +376,7 @@ img[src$=".svg"] {
 }
 
 .hero h1.subheader {
-    font-size: clamp(1em, 4vw, 3em);
+    font-size: clamp(1.5em, 4vw, 3em);
     font-weight: bold;
     font-family: var(--font-headings);
 
@@ -487,17 +487,13 @@ main {
 }
 
 @keyframes floating {
-    from {
-        transform: translate(0, 0px);
-    }
+    
 
     50% {
-        transform: translate(0, 16px);
+        transform: translate(0, 1em);
     }
 
-    to {
-        transform: translate(0, 0px);
-    }
+
 }
 
 

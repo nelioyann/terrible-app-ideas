@@ -1,5 +1,5 @@
 ---
 layout: layouts/home.pug
-title: TAI - Home
-description: TAI is a collection of terrible app ideas
+title: Terrible Project Ideas - Home
+description: TPI is a collection of terrible app ideas
 ---

@@ -12,14 +12,14 @@ ul.grid.responsive-grid-m.reset.gap-m
                     p #{idea.data.description}
                     for category in idea.data.categories
                         div.card__meta #{category}
-    li.fd-c.shadow.new-idea
+    li.fd-c.shadow.new-idea.animate-fade-up
         article.card.borderius.no-overflow
             .card__image.bg-boiler
                 //- span 💡
                 img(src="/images/uploads/transparent.png", alt=title)
 
             .card__body.padding-m
-                small Added today
+                small Might be added today
                 h2 
                     a.no-padding(href="/submit") Your Idea here
                 p.primary.flex
