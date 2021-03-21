@@ -1,11 +1,11 @@
-ul.responsive-grid.reset.gap
+ul.grid.responsive-grid-m.reset.gap
     for idea, i in collections.idea
-        li.flex.fd-c.shadow.padding.borderius
-            article.card 
+        li.fd-c.shadow
+            article.card.borderius.no-overflow 
                 .card__image
-                    img.thumbnail.borderius(src=idea.data.featuredImage, alt=title)
+                    img(src=idea.data.featuredImage, alt=title)
 
-                .card__body
+                .card__body.padding
                     small Added on #{page.date.toDateString()}
                     h2 
                         a.no-padding(href=idea.url) #{idea.data.title}

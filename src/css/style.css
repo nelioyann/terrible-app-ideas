@@ -56,7 +56,8 @@ html {
     --color-light: rgb(229, 229, 229);
     --color-primary: rgb(252, 163, 17);
     --font-body: 'IBM Plex Sans', sans-serif;
-    --font-headings: 'IBM Plex Serif', serif;
+    --font-headings: 'IBM Plex Sans', sans-serif;
+    /* --font-headings: 'IBM Plex Serif', serif; */
     --background: var(--color-light);
     --foreground: var(--color-dark);
     --toggle-size: clamp(2em, 3vw, 15em);
@@ -132,6 +133,16 @@ h5 {
     color: var(--color-dark);
 }
 
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
 
 .flex {
     display: flex;
@@ -214,6 +225,16 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
 }
 
+.responsive-grid-m {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+
+.responsive-grid-l {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+}
+
 .grid {
     display: grid;
 }
@@ -238,6 +259,27 @@ a {
 
 .bg-primary {
     background-color: var(--color-primary);
+}
+
+img {
+    max-width: 100%;
+}
+
+img[width] {
+    width: auto;
+    /* Defer to max-width */
+}
+
+img[width][height] {
+    height: auto;
+    /* Preserve aspect ratio */
+}
+
+/* Let SVG scale without boundaries */
+img[src$=".svg"] {
+    width: 100%;
+    height: auto;
+    max-width: none;
 }
 
 /* ------------------------------------------------------------------------------ HERO */
@@ -280,9 +322,9 @@ a {
 }
 
 /* .hero-image { */
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    /* grid-template-rows: 1fr 1fr 1fr; */
-    /* overflow: hidden; */
+/* grid-template-columns: 1fr 1fr 1fr; */
+/* grid-template-rows: 1fr 1fr 1fr; */
+/* overflow: hidden; */
 
 /* } */
 
@@ -300,7 +342,7 @@ a {
 
 /* .hero .hero__upperline { */
 
-    /* font-size: clamp(0.8em, 1.5vw, 1em); */
+/* font-size: clamp(0.8em, 1.5vw, 1em); */
 /* } */
 
 .hero p.subheader__text {
@@ -394,7 +436,7 @@ main {
     transition: transform .3s;
 }
 
-.floating {  
+.floating {
     animation-name: floating;
     animation-duration: 4s;
     animation-iteration-count: infinite;
@@ -403,23 +445,74 @@ main {
 }
 
 @keyframes floating {
-    from { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 16px); }
-    to   { transform: translate(0, 0px); }    
-} 
+    from {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 16px);
+    }
+
+    to {
+        transform: translate(0, 0px);
+    }
+}
 
 
 /* Type scale */
+h1 {
+    /* margin-top: 0; */
+    font-size: 2.488rem;
+}
+
+h2 {
+    font-size: 2.074rem;
+}
+
+h3 {
+    font-size: 1.728rem;
+}
+
+h4 {
+    font-size: 1.44rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+small,
+.text_small {
+    font-size: 0.707rem;
+}
 
 
-small, .text_small {font-size: 0.707rem;}
+.card{
+    position: relative;
+}
 
-
-
-.card h2{
+.card h2 {
     font-family: var(--font-body);
 }
 
-.card__meta{
+.card__meta {
     text-transform: uppercase;
+    letter-spacing: .2em;
+    word-spacing: -.25em;
+}
+
+.card a::after{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Logo */
+
+.logo svg path{
+    fill:var(--foreground)
 }

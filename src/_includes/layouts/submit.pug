@@ -1,1 +1,30 @@
-include base.pug 
+doctype html
+html(lang="en")
+    include ../partials/head.pug
+    include ../partials/body.pug
+        include ../partials/header.pug
+        main
+            h1 #{title}
+            p #{description}
+            form(action="post")
+                fieldset
+                    legend General Info
+                    label.flex.fd-c(for="subject")
+                        span Subject
+                        input#subject(type="text", name="subject")
+                    label.flex.fd-c(for="subject")
+                        span username
+                        input#user(type="text", name="user")
+                fieldset
+                    legend Project Details
+                    label.flex.fd-c(for="subject")
+                        span Description
+                        textarea#description(name="description", cols="30", rows="10") 
+                    label.flex.fd-c(for="category")
+                        span Category 
+                        select#category(name="category")
+                            option(value="frontend") Frontend
+                button(type="submit") Submit
+
+    include ../partials/scripts.pug
+    
