@@ -6,22 +6,23 @@ html(lang="en")
         main.barba-container(data-barba="container" data-barba-namespace=title)
             h1 #{title}
             p #{description}
-            form(netlify).animate-fade-up
+            form(name="ideas", netlify).animate-fade-up
                 fieldset
                     legend General Info
-                    label.flex.fd-c(for="subject")
-                        span Subject
-                        input#subject(type="text", name="subject")
-                    label.flex.fd-c(for="subject")
-                        span username
-                        input#user(type="text", name="user")
-                fieldset
+                    .responsive-grid-m.gap
+                        label.flex.fd-c(for="subject")
+                            span Subject
+                            input#subject.borderius(type="text", name="subject", required)
+                        label.flex.fd-c(for="subject")
+                            span Username
+                            input#user.borderius(type="text", name="user")
+                fieldset.margin-y.margin-m
                     legend Project Details
                     label.flex.fd-c(for="subject")
                         span Description
-                        textarea#description(name="description", cols="30", rows="10") 
+                        textarea.borderius#description(name="description", rows="10", required) 
                     
-                button.btn-secondary.padding-m.margin-m.margin-y(type="submit") Submit
+                button.btn.btn-secondary.margin-m.margin-y.borderius(type="submit") Submit
         include ../partials/footer.pug
     include ../partials/scripts.pug
     

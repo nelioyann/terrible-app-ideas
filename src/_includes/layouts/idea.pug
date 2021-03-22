@@ -5,12 +5,14 @@ html(lang="en")
         include ../partials/header.pug
         main.barba-container(data-barba="container" data-barba-namespace=title)
             div.margin-m.margin-y
-                a.bg-accent.padding-m.borderius(href="/ideas")
+                a.flex.gap.bg-accent.padding-m.borderius.icon-wrapper.shadow(href="/ideas")
+                    include ../partials/allSVG.pug
                     span See All
-            h1 #{title}
-            img.thumbnail(src=featuredImage, alt=title)
-            p #{description}
-            div !{content}
+            div.animate-fade-up
+                h1 #{title}
+                img.thumbnail(src=featuredImage, alt=title)
+                p #{description}
+                div !{content}
             //- .related 
             //-     for idea, i in collections.idea
         include ../partials/footer.pug
