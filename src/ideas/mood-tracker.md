@@ -1,5 +1,5 @@
 ---
-title: Mood Tracker
+title: Mood Tracking App
 description: Track your mood and get a visual representation of how your life is
   changing over time.
 author: Surjith S M
