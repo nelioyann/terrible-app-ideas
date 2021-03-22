@@ -12,15 +12,15 @@ html(lang="en")
                     .responsive-grid-m.gap
                         label.flex.fd-c(for="subject")
                             span Subject
-                            input#subject.borderius(type="text", name="subject", required)
+                            input#subject.borderius.shadow(type="text", name="subject", required)
                         label.flex.fd-c(for="subject")
                             span Username
-                            input#user.borderius(type="text", name="user")
+                            input.shadow#user.borderius(type="text", name="user")
                 fieldset.margin-y.margin-m.animate-fade-up
                     legend Project Details
                     label.flex.fd-c(for="subject")
                         span Description
-                        textarea.borderius#description(name="description", rows="10", required) 
+                        textarea.shadow.borderius#description(name="description", rows="10", required) 
                     
                 button.animate-fade-up.btn.btn-secondary.margin-m.margin-y.borderius(type="submit") Submit
         include ../partials/footer.pug
