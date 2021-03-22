@@ -8,8 +8,8 @@ head
 
 
     //- Custom Browser colors on Mobile 
-    meta(name="theme-color" content="#1843c1")
-    meta(name="apple-mobile-web-app-status-bar-style" content="#1843c1")
+    meta(name="theme-color" content=meta.theme_color)
+    meta(name="apple-mobile-web-app-status-bar-style" content=meta.theme_color)
 
     //-  Primary Meta Tags 
     meta(name="title" content=title)
@@ -17,7 +17,7 @@ head
 
     //- Open Graph / Facebook 
     meta(property="og:type" content="website")
-    meta(property="og:url" content="")
+    meta(property="og:url" content=permalink)
     meta(property="og:title" content=title)
     meta(property="og:description" content=description)
     //- 1200 x 628 
@@ -29,3 +29,10 @@ head
     meta(property="twitter:title" content=title)
     meta(property="twitter:description" content=description)
     meta(property="twitter:image" content="")
+
+
+
+
+    //- Favicons
+    link(rel="shortcut icon", href="/images/favicon-16x16.png", type="image/x-icon", sizes="16x16")
+    link(rel="shortcut icon", href="/images/favicon-32x32.png", type="image/x-icon", sizes="32x32")

@@ -81,7 +81,7 @@ function pageTransition() {
   });
 
   tl.to(".loading-screen", {
-    duration: 0.6,
+    duration: 0.8,
     width: "100%",
     left: "100%",
     ease: "Expo.easeInOut",
