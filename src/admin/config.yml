@@ -17,6 +17,15 @@ collections:
       - {label: "Date", name: "date", widget: "date", default: ""}
       - {label: "Idea Body", name: "body", widget: "markdown"}
       - {label: "Featured Image", name: "featuredImage", widget: "image"}
-      - {label: "Targeted Skills", name: "targetedSkills", widget: "list", default: ""}
       - {label: "Category", name: "categories", default: ["Frontend"], widget: "list"}
+      - label: "Targeted Skills" 
+        name: "targetedSkills" 
+        widget: "object"
+        fields:
+          - {label: "Frontend", name: "frontend", widget: "number", default: 0, value_type: "int", min: 1, max: 4}
+          - {label: "Backend", name: "backend", widget: "number", default: 0, value_type: "int", min: 1, max: 4}
+          - {label: "Database", name: "db", widget: "number", default: 0, value_type: "int", min: 1, max: 4}
+          - {label: "Animations", name: "animations", widget: "number", default: 0, value_type: "int", min: 1, max: 4}
+          - {label: "Mobile", name: "mobile", widget: "number", default: 0, value_type: "int", min: 1, max: 4}
+          - {label: "Accesibility", name: "a11ty", widget: "number", default: 0, value_type: "int", min: 1, max: 4}
       
