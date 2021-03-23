@@ -261,18 +261,25 @@ a {
 
 .margin-m {
     margin: 1em;
-
 }
-
 .margin-y {
     margin-left: 0;
     margin-right: 0;
 }
-
 .margin-x {
     margin-top: 0;
     margin-bottom: 0;
-
+}
+.margin-auto{
+    margin: auto;
+}
+.margin-auto-x{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.margin-auto-y{
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .borderius {
@@ -304,6 +311,7 @@ a {
 
 .btn{
     padding: 1rem 2rem;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 .btn-primary {

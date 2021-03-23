@@ -13,16 +13,15 @@ html(lang="en")
                         label.flex.fd-c(for="subject")
                             span.margin.margin-y Subject*
                             input#subject.borderius.shadow.padding(type="text", name="subject", placeholder="ex: Flashcard App", required)
-                        label.flex.fd-c(for="subject")
+                        label.flex.fd-c(for="user")
                             span.margin.margin-y Username
                             input.shadow#user.borderius.padding(type="text", name="user", placeholder="@anonymous")
                 fieldset.margin-y.margin-m.animate-fade-up.borderius
                     legend Project Details
-                    label.flex.fd-c(for="subject")
-                        span.margin.margin-y Description*
-                        textarea.shadow.borderius#description(name="description", rows="10", required) 
-                    
-                button.animate-fade-up.btn.btn-secondary.margin-m.margin-y.borderius(type="submit") Submit
+                    label.flex.fd-c(for="description")
+                        span.margin.margin-y Description
+                        textarea.shadow.borderius#description(name="description",  rows="10", required) 
+                button.animate-fade-up.btn.btn-primary.margin-m.margin-y.borderius(type="submit") Submit
         include ../partials/footer.pug
     include ../partials/scripts.pug
     
