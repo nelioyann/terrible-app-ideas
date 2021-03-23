@@ -13,8 +13,8 @@ collections:
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/idea.pug"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "string"}
-      - {label: "Date", name: "date", widget: "date", default: ""}
+      - {label: "Description", name: "description", widget: "string", default: "Requirements, Suggested Implementation, Ressources"}
+      - {label: "Date", name: "date", widget: "date"}
       - {label: "Idea Body", name: "body", widget: "markdown"}
       - {label: "Featured Image", name: "featuredImage", widget: "image", default: "/images/uploads/transparent.png"}
       - {label: "Category", name: "categories", default: ["Frontend"], widget: "list"}
@@ -22,10 +22,10 @@ collections:
         name: "targetedSkills" 
         widget: "object"
         fields:
-          - {label: "Frontend", name: "frontend", widget: "number", default: 0, value_type: "int", min: 1, max: 4}
-          - {label: "Backend", name: "backend", widget: "number", default: 0, value_type: "int", min: 1, max: 4}
-          - {label: "Database", name: "db", widget: "number", default: 0, value_type: "int", min: 1, max: 4}
-          - {label: "Animations", name: "animations", widget: "number", default: 0, value_type: "int", min: 1, max: 4}
-          - {label: "Mobile", name: "mobile", widget: "number", default: 0, value_type: "int", min: 1, max: 4}
-          - {label: "Accesibility", name: "a11ty", widget: "number", default: 0, value_type: "int", min: 1, max: 4}
+          - {label: "Frontend", name: "frontend", widget: "number", default: 0, value_type: "int", min: 0, max: 4}
+          - {label: "Backend", name: "backend", widget: "number", default: 0, value_type: "int", min: 0, max: 4}
+          - {label: "Database", name: "db", widget: "number", default: 0, value_type: "int", min: 0, max: 4}
+          - {label: "Animations", name: "animations", widget: "number", default: 0, value_type: "int", min: 0, max: 4}
+          - {label: "Mobile", name: "mobile", widget: "number", default: 0, value_type: "int", min: 0, max: 4}
+          - {label: "Accesibility", name: "a11ty", widget: "number", default: 0, value_type: "int", min: 0, max: 4}
       
