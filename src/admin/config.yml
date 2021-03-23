@@ -14,7 +14,9 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/idea.pug"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
-      - {label: "Date", name: "date", widget: "date", default:""}
+      - {label: "Date", name: "date", widget: "date", default: ""}
       - {label: "Idea Body", name: "body", widget: "markdown"}
       - {label: "Featured Image", name: "featuredImage", widget: "image"}
+      - {label: "Targeted Skills", name: "targetedSkills", widget: "list", default: ""}
+      - {label: "Category", name: "categories", default: ["Frontend"], widget: "list"}
       
