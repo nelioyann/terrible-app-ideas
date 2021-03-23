@@ -649,7 +649,7 @@ footer {
 }
 
 .bg-boiler::after {
-    content: "Terrible Project Idea 💡";
+    content: attr(data-title);
     position: absolute;
     color: var(--color-accent);
     z-index: 2;

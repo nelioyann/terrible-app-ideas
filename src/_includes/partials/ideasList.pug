@@ -2,8 +2,12 @@ ul.grid.responsive-grid-m.reset.gap-m
     for idea, i in collections.idea
         li.flex.shadow.animate-fade-up
             article.flex.fd-c.card.no-overflow.bg-accent
-                .card__image
-                    img(src=idea.data.featuredImage, alt=title)
+                if idea.data.featuredImage == "/images/uploads/transparent.png"
+                    .card__image.bg-boiler(data-title=idea.data.title)
+                        img(src=idea.data.featuredImage, alt=title)
+                else 
+                    .card__image
+                        img(src=idea.data.featuredImage, alt=title)
 
                 .card__body.flex.fd-c.padding-m.fg-1
                     small Added on #{page.date.toDateString()}
@@ -14,7 +18,7 @@ ul.grid.responsive-grid-m.reset.gap-m
                         div.card__meta #{category}
     li.flex.shadow.new-idea.animate-fade-up
         article.flex.fd-c.card.no-overflow.bg-accent
-            .card__image.bg-boiler
+            .card__image.bg-boiler(data-title="Terrible Project Idea 💡")
                 //- span 💡
                 img(src="/images/uploads/transparent.png", alt=title)
 
