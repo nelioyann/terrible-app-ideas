@@ -47,19 +47,10 @@ let background = preferedTheme === "dark" ? dark : light;
 let foreground = preferedTheme === "dark" ? light : dark;
 
 elToggle.addEventListener("click", () => {
-  // background = background === light ? dark : light;
-  // foreground = foreground === light ? dark : light;
-  // document.documentElement.style.setProperty("--background", background);
-  // document.documentElement.style.setProperty("--foreground", foreground);
-
   let preferedTheme = elToggle.checked ? "light" : "dark";
   changeUiTheme(preferedTheme);
-  // console.log({preferedTheme})
   localStorage.setItem("theme", preferedTheme);
 });
-
-
-
 
 function delay(n) {
   n = n || 2000;
@@ -87,7 +78,9 @@ function pageTransition() {
     ease: "Expo.easeInOut",
     delay: 0.4,
   });
-  tl.set(".loading-screen", { left: "-100%" });
+  tl.set(".loading-screen", {
+    left: "-100%"
+  });
 }
 
 function contentAnimation() {
@@ -99,33 +92,26 @@ function contentAnimation() {
     stagger: 0.4,
     delay: 0.2,
   });
-  // .from("p, h3, figure", {
-  //   duration: 0.6,
-  //   opacity: 0,
-  //   stagger: 0.3,
-  // }, "-=5");
 }
 
 barba.init({
   sync: true,
 
-  transitions: [
-    {
-      async leave(data) {
-        const done = this.async();
+  transitions: [{
+    async leave(data) {
+      const done = this.async();
 
-        pageTransition();
-        await delay(1000);
-        done();
-      },
-
-      async enter(data) {
-        contentAnimation();
-      },
-
-      async once(data) {
-        contentAnimation();
-      },
+      pageTransition();
+      await delay(1000);
+      done();
     },
-  ],
+
+    async enter(data) {
+      contentAnimation();
+    },
+
+    async once(data) {
+      contentAnimation();
+    },
+  }, ],
 });
