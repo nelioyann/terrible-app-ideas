@@ -10,7 +10,13 @@ html(lang="en")
                     span See All
             div.animate-fade-up
                 h1 #{title}
-                img.thumbnail(src=featuredImage, alt=title)
+                if featuredImage == "/images/uploads/transparent.png"
+                    .card__image.bg-boiler(data-title=title)
+                        img(src=featuredImage, alt=title)
+                else 
+                    .card__image
+                        img(src=featuredImage, alt=title)
+                
                 p #{description}
                 div !{content}
             //- .related 

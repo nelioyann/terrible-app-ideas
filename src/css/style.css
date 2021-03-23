@@ -690,7 +690,7 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: clamp(1.5em, 4vw, 2em);
     text-transform: uppercase;
 }
 
