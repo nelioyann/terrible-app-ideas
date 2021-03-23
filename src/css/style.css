@@ -446,15 +446,11 @@ main {
     color: var(--color-dark);
 }
 
-/* @media screen and (max-width:50em) {
-    .hero {
-        grid-template-columns: 1fr;
+@media screen and (max-width:325px) {
+    .responsive-padding {
+        padding: 0 0.5em;
     }
-
-    .hero-image {
-        grid-row-start: 1;
-    }
-} */
+}
 
 /* ------------------------------------------------------------------------------ HERO */
 
@@ -552,17 +548,41 @@ main {
     animation-fill-mode: forwards;
     animation-timing-function: var(--ease-cubic);
 }
+.squish {
+    transform-origin: bottom;
+    animation-name: squish;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transform: scaleY(0.95);
+
+    /* animation-timing-function: var(--ease-cubic); */
+}
+
 
 @keyframes floating {
     50% {
         transform: translate(0, 1em);
     }
 }
+@keyframes squish {
+    0%, 100% {
+        /* opacity: 0.3; */
+        transform: scaleY(0.95);
+    }
+    50%{
+        transform: scaleY(1) ;
+
+    }
+}
+
+
+
 @keyframes rotating {
     100% {
         transform: rotate(1turn);
     }
 }
+
 
 
 /* Type scale */
