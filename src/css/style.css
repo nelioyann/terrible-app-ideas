@@ -655,7 +655,9 @@ footer {
     text-transform: uppercase;
 }
 
-
+.bg-light{
+    background-color: var(--color-light);
+}
 /* Barba */
 
 

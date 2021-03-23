@@ -6,7 +6,7 @@ html(lang="en")
         main.barba-container(data-barba="container" data-barba-namespace=title)
             h1 #{title}
             p #{description}
-            form.flex.fd-c.gap(name="ideas", netlify)
+            form.flex.fd-c.gap(name="ideas", action="/submitted.html", autocomplete="off", netlify)
                 fieldset.animate-fade-up.borderius
                     legend General Info
                     .responsive-grid-m.gap
@@ -17,7 +17,7 @@ html(lang="en")
                             span.margin.margin-y Username
                             input.shadow#user.borderius.padding(type="text", name="user", placeholder="@anonymous")
                 fieldset.margin-y.margin-m.animate-fade-up.borderius
-                    //- legend Project Details
+                    legend Project Details
                     label.flex.fd-c(for="subject")
                         span.margin.margin-y Description*
                         textarea.shadow.borderius#description(name="description", rows="10", required) 
