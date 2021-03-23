@@ -16,7 +16,7 @@ collections:
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Date", name: "date", widget: "date", default: ""}
       - {label: "Idea Body", name: "body", widget: "markdown"}
-      - {label: "Featured Image", name: "featuredImage", widget: "image"}
+      - {label: "Featured Image", name: "featuredImage", widget: "image", default: "/images/uploads/transparent.png"}
       - {label: "Category", name: "categories", default: ["Frontend"], widget: "list"}
       - label: "Targeted Skills" 
         name: "targetedSkills" 
