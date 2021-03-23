@@ -5,5 +5,5 @@ module.exports = {
     primary_color: "#fda312",
     twitter_name: "@nelioyann",
     site_url: "https://terribleprojectideas.com",
-    site_thumbnail: "/images/thumbnail.png"
+    site_thumbnail: "https://terribleprojectideas.com/images/thumbnail.png"
 }
