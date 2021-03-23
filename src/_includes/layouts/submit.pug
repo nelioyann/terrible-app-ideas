@@ -11,7 +11,8 @@ html(lang="en")
                     legend General Info
                     .responsive-grid-m.gap
                         label.flex.fd-c(for="subject")
-                            span.margin.margin-y Subject*
+                            span.margin.margin-y Subject
+                                span.primary *
                             input#subject.borderius.shadow.padding(type="text", name="subject", placeholder="ex: Flashcard App", required)
                         label.flex.fd-c(for="user")
                             span.margin.margin-y Username
@@ -20,8 +21,9 @@ html(lang="en")
                     legend Project Details
                     label.flex.fd-c(for="description")
                         span.margin.margin-y Description
+                            span.primary *
                         textarea.shadow.borderius#description(name="description",  rows="10", required) 
-                button.animate-fade-up.btn.btn-primary.margin-m.margin-y.borderius(type="submit") Submit
+                button.pointer.animate-fade-up.btn.btn-primary.margin-m.margin-y.borderius(type="submit") Submit
         include ../partials/footer.pug
     include ../partials/scripts.pug
     
