@@ -452,10 +452,15 @@ main {
     color: var(--color-dark);
 }
 
-@media screen and (max-width:325px) {
+@media screen and (max-width:350px) {
     .responsive-padding {
         padding: 0 0.5em;
     }
+
+    .responsive-grid-l {
+    
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
 }
 
 /* ------------------------------------------------------------------------------ HERO */
