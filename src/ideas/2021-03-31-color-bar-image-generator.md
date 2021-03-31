@@ -26,4 +26,5 @@ targetedSkills:
 
 ## Ressources
 
-[Screenshot page element](https://dev.to/5t3ph/automated-social-sharing-images-with-puppeteer-11ty-and-netlify-22ln)
+- [Screenshot page element](https://dev.to/5t3ph/automated-social-sharing-images-with-puppeteer-11ty-and-netlify-22ln)
+- [Demo](https://github.com/ireade/netlify-puppeteer-screenshot-demo)
